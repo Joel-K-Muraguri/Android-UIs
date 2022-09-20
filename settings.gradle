@@ -14,3 +14,6 @@ dependencyResolutionManagement {
 }
 rootProject.name = "JetPack Compose UI's"
 include ':app'
+include ':podcast'
+include ':workout'
+include ':e-commerce'
