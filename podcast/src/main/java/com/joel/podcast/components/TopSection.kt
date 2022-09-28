@@ -1,9 +1,6 @@
 package com.joel.podcast.components
 
-import androidx.compose.material.Icon
-import androidx.compose.material.IconButton
-import androidx.compose.material.Text
-import androidx.compose.material.TopAppBar
+import androidx.compose.material.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
@@ -16,7 +13,7 @@ import com.joel.podcast.R
 fun TopSection(){
 
     TopAppBar(
-        backgroundColor = Color.White,
+        backgroundColor = MaterialTheme.colors.background,
         contentColor = Color.Black,
         elevation = 0.dp,
         navigationIcon = {
@@ -29,7 +26,8 @@ fun TopSection(){
         title = {
                 Text(
                     text = "Quari PodCast",
-                    textAlign = TextAlign.Center
+                    textAlign = TextAlign.Center,
+                    color = Color.Black
                 )
         },
 

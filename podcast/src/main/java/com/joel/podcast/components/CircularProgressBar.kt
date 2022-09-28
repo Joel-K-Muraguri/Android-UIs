@@ -6,6 +6,7 @@ import androidx.compose.animation.core.tween
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.size
+import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -62,7 +63,7 @@ fun CustomCircularProgressBar(
         }
         Text(
             text = "${(currentPercentage.value * number ).toInt().toString()}%",
-            color = androidx.compose.ui.graphics.Color.Black,
+            color = MaterialTheme.colors.primaryVariant,
             fontSize = 10.sp
         )
     }

@@ -11,7 +11,7 @@ import androidx.compose.ui.unit.dp
 import com.joel.podcast.R
 
 @Composable
-fun BottomSection(){
+fun BottomBarSection(){
 
     BottomAppBar(
         backgroundColor = MaterialTheme.colors.background,
@@ -40,12 +40,17 @@ fun RowScope.Items(screen : Bottom){
              Image(painter = painterResource(id = screen.icon), contentDescription = screen.title)
         },
         label = {
-              Text(text = screen.title)
+              Text(
+                  text = screen.title,
+                  color = Color.Black
+              )
         },
         onClick = {
 
         },
-        selected = false
+        selected = true,
+        selectedContentColor = Color.White,
+        unselectedContentColor = Color.White.copy(0.5f)
     )
 }
 
@@ -76,5 +81,5 @@ sealed class Bottom(
 @Preview
 @Composable
 fun BottomPreview(){
-    BottomSection()
+    BottomBarSection()
 }

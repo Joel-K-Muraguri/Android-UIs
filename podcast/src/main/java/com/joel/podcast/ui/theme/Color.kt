@@ -11,3 +11,6 @@ val Teal200 = Color(0xFF03DAC5)
 val MainColor = Color(0xFFF44336)
 val SurfaceColor = Color(0xFFE8F3F2)
 
+val Main = Color(0xFF352C2B)
+
+

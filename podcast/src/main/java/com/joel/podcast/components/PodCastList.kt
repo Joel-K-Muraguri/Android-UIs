@@ -8,9 +8,10 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.joel.podcast.model.DataStore
+import com.ramcosta.composedestinations.navigation.DestinationsNavigator
 
 @Composable
-fun PodCastList(){
+fun PodCastList(navigator: DestinationsNavigator){
 
     val podCast = remember {
         DataStore.podCast
@@ -20,7 +21,7 @@ fun PodCastList(){
         items(
             items = podCast,
             itemContent = {
-                PodCastItem(podCast = it)
+                PodCastItem(podCast = it, navigator)
             }
         )
     }

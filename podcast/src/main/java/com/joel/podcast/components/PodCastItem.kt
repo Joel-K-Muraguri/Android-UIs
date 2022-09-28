@@ -16,18 +16,21 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.joel.podcast.destinations.DetailScreenDestination
 import com.joel.podcast.model.PodCast
+import com.ramcosta.composedestinations.navigation.DestinationsNavigator
 
 @Composable
 fun PodCastItem(
-    podCast: PodCast
+    podCast: PodCast,
+    navigator: DestinationsNavigator
 ){
     Column(
         verticalArrangement = Arrangement.Center,
         modifier = Modifier
             .padding(12.dp)
             .clickable {
-
+                    navigator.navigate(DetailScreenDestination)
             },
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
@@ -51,7 +54,7 @@ fun PodCastItem(
                 Text(
                     text = podCast.name,
                     overflow = TextOverflow.Ellipsis,
-                    color = Color.Black
+                    color = MaterialTheme.colors.primaryVariant
                 )
                 Text(
                     text = podCast.time,

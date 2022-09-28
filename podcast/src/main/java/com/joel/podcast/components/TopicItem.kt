@@ -19,7 +19,8 @@ fun TopicItem(topic: Topic){
     
    Card(
        elevation = 5.dp,
-       shape = RoundedCornerShape(15.dp)
+       shape = RoundedCornerShape(15.dp),
+       modifier = Modifier.padding(12.dp)
    ) {
        Row(
            horizontalArrangement = Arrangement.Center,
